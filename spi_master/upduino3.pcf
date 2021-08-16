@@ -1,0 +1,62 @@
+###############################################################################
+#
+# UPduino3 constraint file (upduino3.pcf)
+#
+# Refer to https://github.com/tinyvision-ai-inc/UPduino-v3.0
+#
+# Chuck Pateros, USD
+# 27-May-2021
+#
+###############################################################################
+
+# Short R16 to use UPduino board provided 12 MHz clock
+set_io -nowarn clk        20   
+
+# Seven-segment display signals
+set_io -nowarn COLS[0]   36 
+set_io -nowarn COLS[1]   47 
+set_io -nowarn COLS[2]   45 
+set_io -nowarn COLS[3]   37 
+set_io -nowarn COLS[4]   3 
+set_io -nowarn COLS[5]   34 
+set_io -nowarn COLS[6]   38 
+set_io -nowarn COLS[7]   28
+# 
+set_io -nowarn ROWS[0]   31
+set_io -nowarn ROWS[1]   42
+set_io -nowarn ROWS[2]   44
+set_io -nowarn ROWS[3]   43
+set_io -nowarn ROWS[4]   2
+set_io -nowarn ROWS[5]   4
+set_io -nowarn ROWS[6]   46
+set_io -nowarn ROWS[7]   48
+
+#Debug LEDs
+set_io -nowarn DBG[0]  21
+set_io -nowarn DBG[1]  19 
+set_io -nowarn DBG[2]  18 
+set_io -nowarn DBG[3]  11 
+
+# Onboard RGB LED
+set_io -nowarn RGB[0]  39 # RGB0 green
+set_io -nowarn RGB[1]  40 # RGB1 blue 
+set_io -nowarn RGB[2]  41 # RBG2 red
+
+# RS232
+set_io -nowarn UART_RX     6 # ser_rx
+set_io -nowarn UART_TX     9 # ser_tx
+
+# SPI Flash
+set_io -nowarn flash_clk  15
+set_io -nowarn flash_csb  16
+set_io -nowarn flash_io0  14
+set_io -nowarn flash_io1  17
+set_io -nowarn flash_io2  12 
+set_io -nowarn flash_io3  13 // overlaps with installed LED
+
+#IMU SPI
+set_io -nowarn sclk 35
+set_io -nowarn mosi 32
+set_io -nowarn cs 27
+set_io -nowarn miso 26
+
